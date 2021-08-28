@@ -1,0 +1,17 @@
+
+; label on .extern
+wrong: .extern w
+
+; non existing label entry 
+; & label 
+label: .entry main 
+
+; label extern & entry
+.entry w 
+
+
+; wrong parameters
+add r , 5
+clr r,
+
+

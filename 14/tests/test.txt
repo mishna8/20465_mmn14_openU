@@ -1,0 +1,47 @@
+
+;2 op all space kinds - correct
+add  r5 , r6 
+add  r5,r6 
+add  r5 ,r6 
+add  r5, r6 
+
+;2 op all spaces to many elements
+sub  r5 r6,r7
+sub  r5 r6 , r7 
+sub  r5 r6, r7 
+sub  r5 r6 ,r7 
+lea  r5,r6 r7
+lea  r5 , r6 r7 
+lea  r5, r6 r7 
+lea  r5 ,r6 r7 
+
+;2 op too little elements
+lea
+lea  r3 
+
+;wrong commas
+cmp  ,r5 
+cmp  r5, 
+cmp  , r4 
+cmp  r4 , 
+cmp  r5 r6 
+cmp  r1 , , r0 
+
+
+; 1 op too many elements
+not  r5 r6 
+not  r5, r6 
+not  r5 , r6 
+not  r5 ,r6 
+not  r5,r6 
+
+; 1 op too little elements
+clr
+
+; 0 op too many elements
+stop  r5 r6
+stop  r5, r6
+stop  r5 , r6
+stop  r5 ,r6
+stop  r5,r6
+stop  r3

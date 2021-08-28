@@ -1,0 +1,39 @@
+
+
+;duplicate label w 
+w: add r5, r3
+
+;wrong labels 
+label add r5 , r6
+label : add r3,r9
+label:add r3 , r5
+
+; label on .extern
+wrong: .extern w
+
+; non existing label non(second scan wont be checked)
+sub w, non
+
+;command label 
+add: add #33 , r0
+ 
+;bad string
+str: .string djfd"
+
+;bad data
+dat: .data r , 8 , -9
+
+;invalid label 
+;& invalid command 
+;& inavalid parameters(but it wont even check)
+6lab: adb r9 , 3
+
+
+;invalid parametes(that will be checked)
+sub dat , +
+
+; invalid nubers
+sub #3045 , #4
+
+
+
